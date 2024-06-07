@@ -1,0 +1,68 @@
+---
+sidebar_position: 2
+---
+
+# Getting Started
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+I quick guide on how to install and setup easy-snackbars.
+
+## Installation
+
+Install the package in your React or React Native project.
+
+<Tabs>
+  <TabItem value="npm" label="npm" default>
+    npm install easy-snackbars
+  </TabItem>
+  <TabItem value="yarn" label="yarn">
+    yarn add easy-snackbars
+  </TabItem>
+</Tabs>
+
+## Configuration
+
+### Wrap your app within easy snackbars provider
+
+```jsx title="App.tsx"
+import * as React from "react";
+
+import { SnackbarsProvider } from "easy-snackbars";
+
+export default function App() {
+  return <SnackbarsProvider>{Your app here}</SnackbarsProvider>;
+}
+```
+
+## Hello Easy Snackbars!
+
+Import useSnackbarsContext and call displaySnackbar in one of the pages of your application.
+If your config has worked correctly a snackbar should show up!
+
+```jsx title="Home.tsx"
+import React from "react";
+import { View, Button } from "react-native";
+
+import { useSnackbarsContext } from "easy-snackbars";
+
+export default function Home() {
+  const { displaySnack } = useSnackbarsContext();
+
+  return (
+    <View>
+      <Button
+        title="Add info message"
+        onPress={() => {
+          displaySnack({ message: "info message" }, "info");
+        }}
+      />
+    </View>
+  );
+}
+```
+
+### Snackbar modes
+
+The second parameter of the displaySnack function defines the snack mode you want to display, the default modes are: _success, error, info and warning_.
