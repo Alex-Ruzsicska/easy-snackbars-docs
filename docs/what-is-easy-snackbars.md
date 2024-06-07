@@ -8,7 +8,7 @@ Welcome to Easy Snackbars, a versatile React and React Native library designed t
 
 At its core, Easy Snackbars offers a default snack component and various exhibition modes such as error, success, and info. However, what sets it apart is its complete customizability. Whether you prefer to utilize your custom components or integrate snackbars from other libraries, Easy Snackbars provides a seamless solution.
 
-[If you're eager to get started, head straight to the Getting Started section](./getting-started.md). Installing the library, wrapping your app with the provider, and calling "displaySnackbar" is all it takes to begin enjoying simple snacks in your project.
+If you're eager to get started, head straight to the Getting Started section. Installing the library, wrapping your app with the provider, and calling "displaySnackbar" is all it takes to begin enjoying simple snacks in your project.
 
 For a deeper dive into the API, explore the comprehensive documentation in the API section. Here, you'll find detailed information on the provider component props and display function parameters.
 
